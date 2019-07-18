@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg navbar-dark primary-color" >
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">Todo</a>
+      
+        <!-- Collapse button --> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+      
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/users/todo">Pending
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/users/addnew">Add New</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/users/completed">Completed</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="/users/logout">Logout</a>
+            </li>
+              
+      
+          </ul>
+          <!-- Links -->
+      
+          <form class="form-inline" action="/users/search" method="POST">
+            <div class="md-form my-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Enter Title to Search" name="search" aria-label="Enter Title to Search">
+            </div>
+          </form>
+        </div>
+        <!-- Collapsible content -->
+      
+    </nav>
+      <!--/.Navbar-->
+    
+    
+    
+    <div style = "width: 1000px ; margin : auto ; margin-top: 50px">
+    
+    <h2 style="font-family: Arial, Helvetica, sans-serif ; text-align: center ; margin-bottom: 20px; color: royalblue " >Search Result</h2>
+    <table class="table table-hover" style="text-align: center">
+            <thead>
+              <tr>
+                <th scope="col">Sr. No.</th>
+                <th scope="col">Titile</th>
+                <th scope="col">Description</th>
+                <th scope="col">Deadline</th>
+                <th scope="col">status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% var temp=1 %>
+              <% obj.forEach((result)=>{ 
+                
+              %>
+    
+              <tr>
+                <th scope="row"><%= temp++ %></th>
+                <td><%= result.title%></td>
+                <td><%= result.description%></td>
+                <td><%= result.deadline%></td>
+                <td><%= result.status%></td>
+                
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>  
+    </div>
+    
+    <script>
+    
+    
+    
+    </script>

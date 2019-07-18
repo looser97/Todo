@@ -1,0 +1,86 @@
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">Todo</a>
+  
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/users/todo">List All
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/addnew">Add New</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/completed">Completed</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/users/logout">Logout</a>
+          </li>
+  
+        <!-- Dropdown -->
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li> -->
+  
+      </ul>
+      <!-- Links -->
+  
+      <form class="form-inline" action="/users/search" method="POST">
+        <div class="md-form my-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Enter Title to Search" name="search" aria-label="Enter Title to Search">
+        </div>
+      </form>
+    </div>
+    <!-- Collapsible content -->
+  
+</nav>
+  <!--/.Navbar-->
+
+
+<div style = "width: 500px ; margin :auto; margin-top: 100px">
+<!-- Default form contact -->
+<form class="text-center border border-light p-5" action="/users/addnew" method="POST">
+
+    <p class="h4 mb-4" >Add New task</p>
+
+    <!-- Title -->
+    <input type="text" name="Title" class="form-control mb-4" placeholder="Title">
+
+    <!-- Description -->
+    <div class="form-group">
+        <textarea class="form-control rounded-0" name="Description" rows="5" placeholder="Description"></textarea>
+    </div>
+    <!--Deadline-->
+
+
+    <div>
+        <h5>Select Deadline</h5>
+        <input placeholder="Selected date" type="date" id="date-picker-example" name="Deadline" class="form-control datepicker">
+    </div>
+
+
+    <!-- Send button -->
+    <button class="btn btn-info btn-block" style="margin-top: 30px;" type="submit">Add new task</button>
+
+</form>
+<!-- Default form contact -->
+</div>
